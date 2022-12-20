@@ -13,6 +13,10 @@ const favicon = require('serve-favicon');
 const logger  = require('morgan');
 
 
+//  Routes
+const bookRoutes = require('./routes/api/books.js');
+
+
 
 
 /*  ===========================================================================
@@ -45,6 +49,20 @@ app.use(express.static(path.join(__dirname, "build")));
 
 
 /*  ===========================================================================
+//  ROUTES
+//  =======================================================================  */
+app.use('/api/books', bookRoutes);
+
+
+// The following "catch all" route (note the *) is necessary to return the index.html on all non-AJAX requests
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
+
+
+
+/*  ===========================================================================
 //  LISTENER
 //  =======================================================================  */
 //  Read the port # from .env file or set it to 3001 if missing
@@ -54,4 +72,4 @@ const PORT = process.env.PORT || 3001;
 //  Listen on port 3001
 app.listen(PORT, () => {
     console.log(`Express app is running on port: ${PORT}`);
-})
+});
