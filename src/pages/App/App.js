@@ -6,6 +6,7 @@ import Header   from '../../components/Header/Header.js';
 import Home     from '../Home/Home.js';
 import Books    from '../Books/Books.js';
 import AddBook  from '../../components/AddBook/AddBook';
+import Book     from '../Book/Book';
 import styles   from './App.module.css';
 
 
@@ -23,6 +24,7 @@ export default function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/books" element={<Books />} />
 				<Route path="/books/new" element={<AddBook />} />
+				<Route path="/books/q/:id" element={<Book />} />
 			</Routes>
 		</div>
 	);

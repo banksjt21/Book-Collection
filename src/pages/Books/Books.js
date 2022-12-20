@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Books.module.css';
 import * as booksAPI from '../../utilities/books-api';
-import sendRequest from '../../utilities/send-request';
 
 
 
@@ -41,7 +40,7 @@ export default function Books() {
                     books.map((book, i) => {
                         return (
                             <div key={i}>
-                                <h4>{book.title}</h4>
+                                <Link to={`/books/q/${book._id}`}><h4>{book.title}</h4></Link>
                                 <img src={book.image} width="100px" />
                                 <p>{book.description}</p>
                                 <ul>
@@ -53,7 +52,6 @@ export default function Books() {
                                         })
                                     }
                                 </ul>
-
                             </div>
                         )
                     })
