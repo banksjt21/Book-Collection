@@ -1,4 +1,14 @@
 /*  ===========================================================================
+//  AddBook.js
+//  ===========================================================================
+//  - Allows the user to enter details for a new book into a form
+//  - Upon submission, the info is stored into the database
+//  =======================================================================  */
+
+
+
+
+/*  ===========================================================================
 //  REQUIREMENTS
 //  =======================================================================  */
 import { useState } from 'react';
@@ -9,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 /*  ===========================================================================
-//  ADDBOOK.js
+//  COMPONENTS
 //  =======================================================================  */
 export default function AddBook() {
     const navigate = useNavigate();
@@ -30,7 +40,7 @@ export default function AddBook() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const book = await addBook(formData);
-        navigate('/');
+        navigate('/books');
         console.log(book);
     }
 

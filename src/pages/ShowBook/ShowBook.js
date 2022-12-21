@@ -1,17 +1,27 @@
 /*  ===========================================================================
-//  REQUIREMENTS
+//  ShowBook.js
+//  ===========================================================================
+//  - Displays the details for the book selected on 'Books' page
+//  - Provides buttons to allow the book to be edited or deleted
+//  =======================================================================  */
+
+
+
+
+/*  ===========================================================================
+//  DEPENDENCIES
 //  =======================================================================  */
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-// import { Link }      from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as booksAPI from '../../utilities/books-api';
 
 
 
 
 /*  ===========================================================================
-//  BOOK
+//  COMPONENTS
 //  =======================================================================  */
 export default function Book() {
 
@@ -32,14 +42,12 @@ export default function Book() {
 
     console.log(book);
 
-
     const navigate = useNavigate();
+
     const handleDelete = async () => {
         await booksAPI.deleteBook(id);
         navigate('/books');
     }
-
-
 
     const loaded = () => {
         return (
@@ -59,6 +67,7 @@ export default function Book() {
                         })
                     }
                 </ul>
+                <Link to={`/books/q/${book._id}/edit`}><button>Edit</button></Link>
                 <button onClick={handleDelete}>Delete</button>
             </div>
         )

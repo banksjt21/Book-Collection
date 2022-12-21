@@ -6,14 +6,15 @@ import Header   from '../../components/Header/Header.js';
 import Home     from '../Home/Home.js';
 import Books    from '../Books/Books.js';
 import AddBook  from '../../components/AddBook/AddBook';
-import Book     from '../Book/Book';
+import ShowBook from '../ShowBook/ShowBook';
+import EditBook from '../EditBook/EditBook.js';
 import styles   from './App.module.css';
 
 
 
 
 /*  ===========================================================================
-//  APP
+//  COMPONENTS
 //  =======================================================================  */
 export default function App() {
 	
@@ -24,7 +25,8 @@ export default function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/books" element={<Books />} />
 				<Route path="/books/new" element={<AddBook />} />
-				<Route path="/books/q/:id" element={<Book />} />
+				<Route path="/books/q/:id/edit" element={<EditBook />} />
+				<Route path="/books/q/:id" element={<ShowBook />} />
 			</Routes>
 		</div>
 	);

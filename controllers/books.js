@@ -4,6 +4,7 @@ module.exports = {
     index,
     remove,
     create,
+    update,
     show
 }
 
@@ -27,7 +28,6 @@ async function remove(req, res) { // delete
 }
 
 async function create(req, res) {
-
     try {
         req.body.author = req.body.author.split(",");
         const book = await Book.create(req.body);
@@ -37,6 +37,15 @@ async function create(req, res) {
         // Client will check for non-2xx status code
         // 400 = Bad Request
         res.status(400).json(error);
+    }
+}
+
+async function update(req, res) {
+    try {
+        const book = await Book.findByIdAndUpdate(req.params.id, req.body);
+        res.status(200).json(book);
+    } catch (error) {
+        res.status(400).json({ msg: error.message });
     }
 }
 

@@ -6,13 +6,16 @@ const booksController = require('../../controllers/books');
 router.get('/', booksController.index);
 
 //  DELETE /api/books/q/:id
-router.delete('/:id', booksController.remove);
+router.delete('/q/:id', booksController.remove);
 
 //  POST /api/books
 router.post('/', booksController.create); // send request to controller
 
+//  PUT /api/books/q/:id/
+router.put('/q/:id/', booksController.update);
+
 //  GET /api/books/q/:id
-router.get('/:id', booksController.show);
+router.get('/q/:id', booksController.show);
 
 
 

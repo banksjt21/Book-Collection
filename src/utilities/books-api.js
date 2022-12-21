@@ -13,9 +13,13 @@ export function getBooks() {
 
 export function showBook(id) {
     // console.log(id)
-    return sendRequest(`${BASE_URL}/${id}`);
+    return sendRequest(`${BASE_URL}/q/${id}`);
 }
 
 export function deleteBook(id) {
-    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+    return sendRequest(`${BASE_URL}/q/${id}`, 'DELETE');
+}
+
+export function updateBook(id, bookInfo) {
+    return sendRequest(`${BASE_URL}/q/${id}`, 'PUT', bookInfo);
 }
