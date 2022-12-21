@@ -21,19 +21,23 @@ export default function Book() {
 
     const getBook = async () => {
         const retrievedBook = await booksAPI.showBook(id);
-        setBook(retrievedBook[0]);
+        console.log(retrievedBook)
+        setBook(retrievedBook);
     }
 
     useEffect(() => {
         getBook();
     }, [])
 
+    console.log(book)
+
 
     const loaded = () => {
         return (
             <div>
                 <h2>{book.title}</h2>
-                <img src={book.image} width="100px" />
+                <p>{book._id}</p>
+                <img src={book.image || '/book-cover-placeholder.png'} width="100px" />
                 <p>{book.category}</p>
                 <p>{book.year}</p>
                 <p>{book.description}</p>

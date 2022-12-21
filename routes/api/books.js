@@ -8,7 +8,7 @@ router.get('/', booksController.index);
 //  POST /api/books
 router.post('/', booksController.create); // send request to controller
 
-//  GET /api/books/:id
+//  GET /api/books/q/:id
 router.get('/:id', booksController.show);
 
 

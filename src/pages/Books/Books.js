@@ -41,7 +41,7 @@ export default function Books() {
                         return (
                             <div key={i}>
                                 <Link to={`/books/q/${book._id}`}><h4>{book.title}</h4></Link>
-                                <img src={book.image} width="100px" />
+                                <img src={book.image || '/book-cover-placeholder.png'} width="100px" />
                                 <p>{book.description}</p>
                                 <ul>
                                     {

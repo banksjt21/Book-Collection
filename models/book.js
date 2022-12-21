@@ -17,7 +17,7 @@ const bookSchema = new Schema(
         author:      [{ type: String }],
         year:         { type: String },
         category:     { type: String },
-        image:        { type: String, },
+        image:        { type: String },
     },
     {
         timestamps: true

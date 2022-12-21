@@ -11,6 +11,7 @@ export function getBooks() {
     return sendRequest(BASE_URL);
 }
 
-export function showBook() {
-    return sendRequest(BASE_URL);
+export function showBook(id) {
+    // console.log(id)
+    return sendRequest(`${BASE_URL}/${id}`);
 }
