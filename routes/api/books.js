@@ -5,6 +5,9 @@ const booksController = require('../../controllers/books');
 //  GET /api/books
 router.get('/', booksController.index);
 
+//  DELETE /api/books/q/:id
+router.delete('/:id', booksController.remove);
+
 //  POST /api/books
 router.post('/', booksController.create); // send request to controller
 

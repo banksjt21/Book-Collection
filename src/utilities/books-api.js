@@ -15,3 +15,7 @@ export function showBook(id) {
     // console.log(id)
     return sendRequest(`${BASE_URL}/${id}`);
 }
+
+export function deleteBook(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+}

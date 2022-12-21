@@ -2,15 +2,25 @@ const Book = require('../models/book');
 
 module.exports = {
     index,
+    remove,
     create,
     show
-} 
+}
 
 
 async function index(req, res) {
     try {
         const books = await Book.find({});
         res.status(200).json(books);
+    } catch (error) {
+        res.status(400).json({ msg: error.message });
+    }
+}
+
+async function remove(req, res) { // delete
+    try {
+        const book = await Book.findByIdAndDelete(req.params.id);
+        res.status(200).json(book);
     } catch (error) {
         res.status(400).json({ msg: error.message });
     }

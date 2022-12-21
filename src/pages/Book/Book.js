@@ -3,6 +3,7 @@
 //  =======================================================================  */
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 // import { Link }      from 'react-router-dom';
 import * as booksAPI from '../../utilities/books-api';
 
@@ -29,7 +30,15 @@ export default function Book() {
         getBook();
     }, [])
 
-    console.log(book)
+    console.log(book);
+
+
+    const navigate = useNavigate();
+    const handleDelete = async () => {
+        await booksAPI.deleteBook(id);
+        navigate('/books');
+    }
+
 
 
     const loaded = () => {
@@ -50,6 +59,7 @@ export default function Book() {
                         })
                     }
                 </ul>
+                <button onClick={handleDelete}>Delete</button>
             </div>
         )
     }
