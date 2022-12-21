@@ -43,7 +43,7 @@ export default function EditBook() {
 
     const getFormData = async => {
         setFormData(book);
-   };
+    };
 
 
     const handleChange = (event) => {

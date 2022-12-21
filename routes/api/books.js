@@ -1,7 +1,27 @@
+/*  ===========================================================================
+//  books.js
+//  ===========================================================================
+//  - Manages requests to server routes
+//  - Sends a request to the controller based on the url (link/button clicked)
+//    and HTTP request method specified here.
+//  =======================================================================  */
+
+
+
+
+/*  ===========================================================================
+//  DEPENDENCIES
+//  =======================================================================  */
 const express         = require('express');
 const router          = express.Router();
 const booksController = require('../../controllers/books');
 
+
+
+
+/*  ===========================================================================
+//  SERVER ROUTES
+//  =======================================================================  */
 //  GET /api/books
 router.get('/', booksController.index);
 

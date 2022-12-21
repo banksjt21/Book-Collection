@@ -1,4 +1,22 @@
+/*  ===========================================================================
+//  books-api.js
+//  ===========================================================================
+//  - Prepares requests to server router by setting parameters of 'sendRequest'
+//  - Request contains the url requested, HTTP request method, and payload
+//    (if necessary)
+//  - Returns servers responses back to the client (react application)
+//  =======================================================================  */
+
+
+
+
+/*  ===========================================================================
+//  DEPENDENCIES
+//  =======================================================================  */
 import sendRequest from "./send-request";
+
+
+
 
 const BASE_URL = '/api/books'; // express router will pass this to the controller
 
