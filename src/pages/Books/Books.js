@@ -12,8 +12,8 @@
 //  =======================================================================  */
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Books.module.css';
 import * as booksAPI from '../../utilities/books-api';
+import styles from './Books.module.css';
 
 
 
@@ -23,13 +23,7 @@ import * as booksAPI from '../../utilities/books-api';
 //  =======================================================================  */
 export default function Books() {
 
-    // sendRequest();
-
     const [books, setBooks] = useState(null);
-
-    // const retrievedBooks = await booksAPI.getBooks();
-    // setBooks(retrievedBooks)
-    // console.log(retrievedBooks);
 
     const getBooks = async () => {
         const retrievedBooks = await booksAPI.getBooks();
