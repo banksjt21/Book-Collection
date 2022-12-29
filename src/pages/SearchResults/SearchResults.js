@@ -29,18 +29,19 @@ export default function SearchResults() {
 
     const [googleBooks, setGoogleBooks] = useState(location.state.searchResults.items);
 
-    console.log(googleBooks);
+    // console.log(googleBooks);
+
 
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(event);
+        // console.log(event);
 
         const selectedID = event.target.googleBookID.value;
-        console.log(selectedID);
+        // console.log(selectedID);
 
         const selectedBook = googleBooks.find(theBook => theBook.id === selectedID);
-        console.log(selectedBook);
+        // console.log(selectedBook);
 
         // Some search results do not have the imageLinks property ...
         if (selectedBook.volumeInfo.imageLinks === undefined) {
@@ -54,13 +55,13 @@ export default function SearchResults() {
         //  Prepare data to be sent to server
         const bookData = {
             title: selectedBook.volumeInfo.title,
-            author: selectedBook.volumeInfo.authors.toString() || ["No Author"],
+            author: selectedBook.volumeInfo.authors.toString() || "No Author",
             description: selectedBook.volumeInfo.description || "No Description",
             year: selectedBook.volumeInfo.publishedDate || "No Date",
-            category: selectedBook.volumeInfo.categories.toString() || ["No Category"],
+            category: selectedBook.volumeInfo.categories.toString() || "No Category",
             image: selectedBook.volumeInfo.imageLinks.thumbnail
         }
-        console.log(bookData);
+        // console.log(bookData);
 
         const book = await addBook(bookData);
         navigate('/books');

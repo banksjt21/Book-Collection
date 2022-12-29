@@ -27,7 +27,7 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const books = await Book.find({});
+        const books = await Book.find({}).sort( { title : 1, _id: 1 } );
         res.status(200).json(books);
     } catch (error) {
         res.status(400).json({ msg: error.message });

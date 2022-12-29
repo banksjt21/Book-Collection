@@ -29,11 +29,11 @@ export default function Book() {
     const [book, setBook] = useState(null);
 
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const getBook = async () => {
         const retrievedBook = await booksAPI.showBook(id);
-        console.log(retrievedBook)
+        // console.log(retrievedBook)
         setBook(retrievedBook);
     }
 
@@ -41,7 +41,7 @@ export default function Book() {
         getBook();
     }, [])
 
-    console.log(book);
+    // console.log(book);
 
     const navigate = useNavigate();
 

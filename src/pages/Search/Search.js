@@ -45,7 +45,7 @@ export default function Search() {
         const books = await searchForBook(formData);
         setGoogleBooks(books);
 
-        console.log(books);
+        // console.log(books);
 
     }
 
