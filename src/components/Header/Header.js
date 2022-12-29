@@ -28,6 +28,7 @@ export default function Header() {
                     <li><Link to={`/`} >Home</Link></li>
                     <li><Link to={`/books`} >Books</Link></li>
                     <li><Link to={`/books/new`}>Add a Book</Link></li>
+                    <li><Link to={`/books/search`}>Add a Book via Search</Link></li>
                 </ul>
             </nav>
         </header>
