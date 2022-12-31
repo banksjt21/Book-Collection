@@ -11,7 +11,7 @@
 /*  ===========================================================================
 //  DEPENDENCIES
 //  =======================================================================  */
-const Book = require('../models/book');
+const Book = require('../../models/book');
 
 
 
@@ -27,7 +27,8 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const books = await Book.find({}).sort( { title : 1, _id: 1 } );
+        console.log(req.user._id)
+        const books = await Book.find({ userID: req.user._id }).sort( { title : 1, _id: 1 } );
         res.status(200).json(books);
     } catch (error) {
         res.status(400).json({ msg: error.message });

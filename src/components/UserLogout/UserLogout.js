@@ -1,7 +1,7 @@
 /*  ===========================================================================
-//  book.js
+//  UserLogout.js
 //  ===========================================================================
-//  - Creates the model schema
+//  - 
 //  =======================================================================  */
 
 
@@ -10,28 +10,27 @@
 /*  ===========================================================================
 //  DEPENDENCIES
 //  =======================================================================  */
-const mongoose = require('mongoose');
+import styles from './UserLogout.module.css';
+import { logOut } from '../../utilities/users-service';
 
 
 
 
 /*  ===========================================================================
-//  SCHEMA
+//  COMPONENTS
 //  =======================================================================  */
-const Schema     = mongoose.Schema;
-const bookSchema = new Schema(
-    {
-        title:        { type: String, required: true },
-        description:  { type: String, },
-        author:      [{ type: String }],
-        year:         { type: String },
-        category:     { type: String },
-        image:        { type: String },
-        userID:       { type: Schema.Types.ObjectId, ref: 'User' }
-    },
-    {
-        timestamps: true
-    }
-);
+export default function UserLogout({ user, setUser }) {
 
-module.exports = mongoose.model('Book', bookSchema);
+    function handleLogout() {
+        logOut();
+        setUser(null);
+    }
+
+    return (
+        <div className={styles.UserLogOut}>
+            <div>{user.username}</div>
+            <div className="">{user.email}</div>
+            <button className="" onClick={handleLogout}>LOG OUT</button>
+        </div>
+    );
+}

@@ -10,7 +10,7 @@
 /*  ===========================================================================
 //  DEPENDENCIES
 //  =======================================================================  */
-//  none
+import { getToken } from './users-service';
 
 
 
@@ -25,6 +25,17 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
         options.headers = { 'Content-Type': 'application/json' };
         options.body = JSON.stringify(payload);
     }
+
+
+    const token = getToken();
+    if (token) {
+        // Ensure headers object exists
+        options.headers = options.headers || {};
+        // Add token to an Authorization header
+        // Prefacing with 'Bearer' is recommended in the HTTP specification
+        options.headers.Authorization = `Bearer ${token}`;
+    }
+
 
     const res = await fetch(url, options);
     // console.log(res)

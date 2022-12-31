@@ -21,7 +21,7 @@ import { addBook } from '../../utilities/books-api';
 /*  ===========================================================================
 //  COMPONENTS
 //  =======================================================================  */
-export default function SearchResults() {
+export default function SearchResults({ user, setUser }) {
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -59,7 +59,8 @@ export default function SearchResults() {
             description: selectedBook.volumeInfo.description || "No Description",
             year: selectedBook.volumeInfo.publishedDate || "No Date",
             category: selectedBook.volumeInfo.categories.toString() || "No Category",
-            image: selectedBook.volumeInfo.imageLinks.thumbnail
+            image: selectedBook.volumeInfo.imageLinks.thumbnail,
+            userID: user._id
         }
         // console.log(bookData);
 

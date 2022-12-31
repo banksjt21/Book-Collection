@@ -21,7 +21,7 @@ import styles from './Books.module.css';
 /*  ===========================================================================
 //  COMPONENTS
 //  =======================================================================  */
-export default function Books() {
+export default function Books({ user, setUser }) {
 
     const [books, setBooks] = useState(null);
 

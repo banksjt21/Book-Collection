@@ -22,8 +22,9 @@ import styles from './AddBook.module.css';
 /*  ===========================================================================
 //  COMPONENTS
 //  =======================================================================  */
-export default function AddBook() {
+export default function AddBook({ user, setUser }) {
     const navigate = useNavigate();
+    // console.log(user)
 
     const [formData, setFormData] = useState({
         title: "",
@@ -31,7 +32,8 @@ export default function AddBook() {
         description: "",
         year: "",
         category: "",
-        image: ""
+        image: "",
+        userID: user._id
     });
 
     const handleChange = (event) => {

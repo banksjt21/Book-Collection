@@ -11,7 +11,7 @@
 //  DEPENDENCIES
 //  =======================================================================  */
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
+import UserLogout from '../UserLogout/UserLogout';
 
 
 
@@ -19,7 +19,7 @@ import styles from './Header.module.css';
 /*  ===========================================================================
 //  HEADER
 //  =======================================================================  */
-export default function Header() {
+export default function Header({ user, setUser }) {
     return (
         <header>
             <h1>Book Collection</h1>
@@ -29,6 +29,7 @@ export default function Header() {
                     <li><Link to={`/books`} >Books</Link></li>
                     <li><Link to={`/books/new`}>Add a Book</Link></li>
                     <li><Link to={`/books/search`}>Add a Book via Search</Link></li>
+                    <UserLogout user={user} setUser={setUser} />
                 </ul>
             </nav>
         </header>

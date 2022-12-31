@@ -1,9 +1,7 @@
 /*  ===========================================================================
-//  books.js
+//  users.js
 //  ===========================================================================
-//  - Manages requests to server routes
-//  - Sends a request to the controller based on the url (link/button clicked)
-//    and HTTP request method specified here.
+//  - 
 //  =======================================================================  */
 
 
@@ -14,7 +12,8 @@
 //  =======================================================================  */
 const express         = require('express');
 const router          = express.Router();
-const booksController = require('../../controllers/api/books');
+const usersController = require('../../controllers/api/users');
+const ensureLoggedIn  = require("../../config/ensureLoggedIn")
 
 
 
@@ -22,21 +21,14 @@ const booksController = require('../../controllers/api/books');
 /*  ===========================================================================
 //  SERVER ROUTES
 //  =======================================================================  */
-//  GET /api/books
-router.get('/', booksController.index);
+//  POST /api/users
+router.post("/", usersController.create)
 
-//  DELETE /api/books/q/:id
-router.delete('/q/:id', booksController.remove);
+//  POST /api/users/login
+router.post("/login", usersController.login)
 
-//  POST /api/books
-router.post('/', booksController.create); // send request to controller
-
-//  PUT /api/books/q/:id/
-router.put('/q/:id/', booksController.update);
-
-//  GET /api/books/q/:id
-router.get('/q/:id', booksController.show);
-
+//  GET /api/users/check-token
+router.get('/check-token', ensureLoggedIn, usersController.checkToken);
 
 
 module.exports = router;
