@@ -12,7 +12,6 @@
 //  =======================================================================  */
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import { searchForBook } from '../../utilities/books-api-search';
 import styles from './Search.module.css';
 
