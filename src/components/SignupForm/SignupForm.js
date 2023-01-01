@@ -20,8 +20,7 @@ import { signUp } from '../../utilities/users-service';
 //  COMPONENTS
 //  =======================================================================  */
 export default function SignupForm({ setUser }) {
-
-
+    
     const [credentials, setCredentials] = useState({
         username: '',
         email: '',

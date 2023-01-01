@@ -18,13 +18,13 @@ import Books from '../Books/Books';
 import AddBook from '../../components/AddBook/AddBook';
 import ShowBook from '../ShowBook/ShowBook';
 import EditBook from '../EditBook/EditBook';
-import styles from './App.module.css';
-import Search from '../Search/Search';
+import Search from '../../components/Search/Search';
 import SearchResults from '../SearchResults/SearchResults.js';
+import styles from './App.module.css';
 
+import { Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
-import { Navigate } from 'react-router-dom';
 
 
 
