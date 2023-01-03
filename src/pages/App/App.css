@@ -41,6 +41,7 @@ body {
 h1 {
     font-size: 48px;
     color: var(--yellow);
+    mix-blend-mode: difference;
 }
 
 h2 {

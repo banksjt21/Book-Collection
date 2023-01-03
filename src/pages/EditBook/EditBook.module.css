@@ -69,3 +69,9 @@
     margin-bottom: 15px;
     text-decoration: underline;
 }
+
+#bookImage {
+    min-height: calc(100vh - 400px);
+    image-rendering: pixelated;
+    /* filter: grayscale(100%); */
+}

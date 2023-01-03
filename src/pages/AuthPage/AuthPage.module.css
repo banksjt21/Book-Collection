@@ -10,11 +10,6 @@
 /*  ===========================================================================
 //  Tags
 //  =======================================================================  */
-h1 {
-    mix-blend-mode: difference;
-    margin-bottom: 40px;
-}
-
 button:hover{
     mix-blend-mode: difference;
 }
@@ -79,6 +74,24 @@ button:hover{
     color:teal;
 }
 
+#authHeader img {
+    height: 50px;
+    margin-right: 10px;
+    mix-blend-mode: difference;
+}
+
+#authHeader h1 {
+    display: inline;
+    mix-blend-mode: difference;
+}
+
+
+#authHeader .titleBlock {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+    
 
 
 
@@ -123,10 +136,11 @@ button:hover{
 //  Main
 //  =======================================================================  */
 #authPage main {
-    height: 700px;
+    /* height: 700px; */
     background-color: rgba(242,202,92,0.9);
     padding: 100px 160px;
     flex-direction: column;
+    min-height: auto;
 }
 
 #authPage main h2 {

@@ -82,7 +82,7 @@ export default function EditBook() {
                             <div className={styles.editTitleDiv}>
                                 <h2>Editing: </h2>
                                 {/* <label>Title</label><br /> */}
-                                <input className={styles.editTitle} type="text" name="title" onChange={handleChange} defaultValue={book.title} autoFocus required /><br />
+                                <input className={styles.editTitle} type="text" name="title" onChange={handleChange} defaultValue={book.title} required /><br />
                             </div>
 
                             {/* <label>Author</label><br /> */}

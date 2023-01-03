@@ -69,7 +69,7 @@ export default function Search() {
                 <div>
                     {/* <h2>Search</h2> */}
                     <form autoComplete="off" onSubmit={handleSubmit}>
-                        <label>Search Terms</label>
+                        <label>Search Terms&nbsp;(required)</label>
                         <input type="text" name="searchTerms" onChange={handleChange} autoFocus required />
                         <label>Title</label>
                         <input type="text" name="title" onChange={handleChange} />

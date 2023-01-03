@@ -54,17 +54,17 @@ export default function AddBook({ user, setUser }) {
                 <div>
                     {/* <h2>Add a New Book</h2> */}
                     <form autoComplete="off" onSubmit={handleSubmit}>
-                        <label>Title</label>
+                        <label>Title&nbsp;(required)</label>
                         <input type="text" name="title" onChange={handleChange} autoFocus required />
                         <label>Author</label>
                         <input type="text" name="author" onChange={handleChange} />
                         <label>Description</label>
                         <textarea name="description" rows="5" cols="50" onChange={handleChange} ></textarea>
-                        <label>Year Published</label>
+                        <label>Date Published&nbsp;(YYYY-MM-DD)</label>
                         <input type="text" name="year" onChange={handleChange} />
                         <label>Category</label>
                         <input type="text" name="category" onChange={handleChange} />
-                        <label>Image</label>
+                        <label>Image URL</label>
                         <input type="text" name="image" onChange={handleChange} /><br />
                         <input type="submit" value="Add Book" />
                     </form>

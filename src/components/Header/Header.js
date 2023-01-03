@@ -24,6 +24,7 @@ export default function Header({ user, setUser }) {
     return (
         <header>
             <div id={styles.titleLinks}>
+                <img src='/images/logo.svg' />
                 <h1>TSUNDOKU</h1>
                 <nav>
                     <ul>
