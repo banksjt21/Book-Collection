@@ -38,8 +38,8 @@ export default function AuthPage({ setUser }) {
                 <div id={styles.headerDetails}>
                     <div className={styles.headerDetailsContent}>
                         <h1>TSUNDOKU</h1>
-                        <p className={styles.subtitle}>Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. </p>
-                        <p className={styles.subtext}>Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials but letting them pile up in one's home without reading them.</p>
+                        <p className={styles.subtitle}>Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials but letting them pile up in one's home without reading them.</p>
+                        <p className={styles.subtext}>Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet.</p>
                         <div className="buttonGroup">
                             <button onClick={() => setShowLogin(true)} className={styles.buttonLogin}>Login</button>
                             <button onClick={() => setShowLogin(false)} className={styles.buttonSignup}>Signup</button>

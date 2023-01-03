@@ -105,7 +105,7 @@ export default function SearchResults({ user, setUser }) {
                                 if (book.imageLinks) {
                                     bookCover = book.imageLinks.thumbnail;
                                 } else {
-                                    bookCover = '/book-cover-placeholder.png'
+                                    bookCover = '/images/book-cover-placeholder.png'
                                 }
 
                                 book.categories = book.categories || ["No Category"];
@@ -163,7 +163,9 @@ export default function SearchResults({ user, setUser }) {
                 </div>
 
                 <div className='splitPage'>
-                    <div className='overlay'></div>
+                    <div className='overlay'>
+                        <img src='/images/reading-fox.png' />
+                    </div>
                 </div>
 
             </main>

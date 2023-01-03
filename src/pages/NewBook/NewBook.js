@@ -27,22 +27,31 @@ export default function NewBook({ user, setUser }) {
     const [showSearch, setShowSearch] = useState(true);
 
     const backImage = {
-        backgroundImage: "url(/images/kot-ptitsa-knigi.png)",
-        backgroundSize: '2400px',
-        backgroundPosition: '25% 95%',
-        backgroundRepeat: 'none'
+        backgroundImage: "url(/images/bookshelf-1-bw-faded.png)",
+        backgroundPosition: '25% 35%',
+        backgroundRepeat: 'none',
+        backgroundAttachment: 'fixed'
     }
 
     return (
-        <>
-            <div>
-                <h3>{showSearch ? 'Add Book Manually' : 'Add Book via Search'}</h3>
-                <div className="buttonGroup">
-                    <span onClick={() => setShowSearch(true)} className='mainSubtitle'>Add Book Manually</span>
-                    <span onClick={() => setShowSearch(false)} className='mainSubtitle'>Add Book via Search</span>
+        <main style={backImage} id={styles.searchResults} >
+            <div id={styles.newBook} className="splitPage mainPadding">
+                <div>
+                    <h2>{showSearch ? 'Add Book via Search' : 'Add Book Manually'}</h2>
+                    <div className="buttonGroup">
+                        <span onClick={() => setShowSearch(true)} className={`mainSubtitle ${styles.searchLink}`}>Add Book via Search</span>
+                        <span className='mainSubtitle'> | </span>
+                        <span onClick={() => setShowSearch(false)} className={`mainSubtitle ${styles.searchLink}`}>Add Book Manually</span>
+                    </div>
+                    {showSearch ? <Search user={user} setUser={setUser} /> : <AddBook user={user} setUser={setUser} />}
                 </div>
-                {showSearch ? <AddBook user={user} setUser={setUser} /> : <Search user={user} setUser={setUser} />}
+
             </div>
-        </>
+            <div className='splitPage'>
+                <div className='overlay'>
+                    <img src='/images/reading-girls.png' />
+                </div>
+            </div>
+        </main>
     )
 }

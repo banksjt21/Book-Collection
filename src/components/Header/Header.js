@@ -29,8 +29,8 @@ export default function Header({ user, setUser }) {
                     <ul>
                         {/* <li><Link to={`/`} >Home</Link></li> */}
                         <li><Link to={`/books`} >Collection</Link></li>
-                        <li><Link to={`/books/new`}>Add a Book</Link></li>
-                        <li><Link to={`/books/search`}>Add a Book via Search</Link></li>
+                        <li><Link to={`/books/new`}>Add Book</Link></li>
+                        {/* <li><Link to={`/books/search`}>Add a Book via Search</Link></li> */}
                     </ul>
                 </nav>
             </div>

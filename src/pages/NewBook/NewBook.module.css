@@ -1,0 +1,21 @@
+
+
+#newBook label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#newBook input[type=text],
+#newBook textarea {
+    margin-bottom: 20px;
+}
+
+.searchLink {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+.searchLink:hover {
+    color: var(--orange);
+}

@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid #EEEEEE;
+    /* border: 1px solid #EEEEEE; */
 }
 
 
@@ -109,29 +109,19 @@ textarea {
     gap: 20px;
 }
 
-/* .displayFlex {
-    display: flex;
-}
-
-.displayFlexColumn {
-    display: flex;
-    flex-direction: column;
-}
-
-.displayFlexRow {
-    display: flex;
-    flex-direction: row;
-}
-
-.alignCenter {
-    justify-content: center;
-    align-items: center;
-} */
-
 .overlay {
     background-color: rgba(12, 40, 64, 0.70);
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.overlay img {
+    mix-blend-mode: difference;
+    position: fixed;
+    max-width: 35%;
 }
 
 .mainPadding {
@@ -157,3 +147,26 @@ main {
     width: 50%;
     display: flex;
 }
+
+
+
+
+
+/* .displayFlex {
+    display: flex;
+}
+
+.displayFlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.displayFlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.alignCenter {
+    justify-content: center;
+    align-items: center;
+} */
