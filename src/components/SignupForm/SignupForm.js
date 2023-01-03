@@ -12,6 +12,7 @@
 //  =======================================================================  */
 import { useState } from 'react';
 import { signUp } from '../../utilities/users-service';
+import styles from './SignupForm.module.css';
 
 
 
@@ -20,7 +21,7 @@ import { signUp } from '../../utilities/users-service';
 //  COMPONENTS
 //  =======================================================================  */
 export default function SignupForm({ setUser }) {
-    
+
     const [credentials, setCredentials] = useState({
         username: '',
         email: '',
@@ -51,7 +52,7 @@ export default function SignupForm({ setUser }) {
             setUser(user);
         } catch {
             // An error happened on the server
-           setError({ error: 'Sign Up Failed - Try Again' });
+            setError({ error: 'Sign Up Failed - Try Again' });
         }
     };
 
@@ -64,21 +65,18 @@ export default function SignupForm({ setUser }) {
     const disable = credentials.password !== credentials.confirm;
 
     return (
-        <div>
+        <>
             <div className="">
+                <p className={styles.authText}>Need an account?</p>
                 <form autoComplete="off" onSubmit={handleSubmit}>
-                    <label>Username</label>
-                    <input type="text" name="username" value={credentials.username} onChange={handleChange} required />
-                    <label>Email</label>
-                    <input type="email" name="email" value={credentials.email} onChange={handleChange} required />
-                    <label>Password</label>
-                    <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-                    <label>Confirm</label>
-                    <input type="password" name="confirm" value={credentials.confirm} onChange={handleChange} required />
-                    <button type="submit" disabled={disable}>SIGN UP</button>
+                    <input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Username" required /><br />
+                    <input type="email" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" required /><br />
+                    <input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required /><br />
+                    <input type="password" name="confirm" value={credentials.confirm} onChange={handleChange} placeholder="Confirm" required /><br />
+                    <button type="submit" disabled={disable}>SIGNUP</button>
                 </form>
             </div>
             <p className="">&nbsp;{credentials.error}</p>
-        </div>
+        </>
     );
 }

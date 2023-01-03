@@ -1,0 +1,35 @@
+
+
+/* #searchResults {
+
+} */
+
+#searchResults h3 {
+    font-size: 20px;
+    color: rgb(35, 60, 79);
+    margin-bottom: 5px;
+}
+
+.resultBook {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.resultBookDetails {
+    margin-left: 20px;
+}
+
+.resultBookDetails ul {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.resultBookDetails ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#searchResults form {
+    margin-bottom: 80px;
+}

@@ -1,3 +1,48 @@
 /*  ===========================================================================
 //  BOOKS.MODULE.CSS
 //  =======================================================================  */
+
+
+/* main {
+    padding: 100px 160px;
+    height: calc(100vh - 200px);
+} */
+
+main h2 {
+    color: rgb(35, 60, 79);
+    margin-bottom: 5px;
+}
+
+#collection {
+    padding: 100px 160px;
+}
+
+#allBooks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book {
+    display: flex;
+    align-items: flex-end;
+    opacity: 0.75;
+    transition: all 500ms;
+}
+
+.book img {
+    width: 128px;
+    border-radius: 5px;
+}
+
+.book:hover {
+    opacity: 1.0;
+}
+
+.collectionInfo {
+    display: block;
+    color: var(--orange);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

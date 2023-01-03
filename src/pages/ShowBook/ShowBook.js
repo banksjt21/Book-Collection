@@ -51,26 +51,51 @@ export default function Book() {
     }
 
     const loaded = () => {
+
+        const backImage = {
+            backgroundImage: "url(/images/bookshelf-1-bw-faded.png)",
+            backgroundPosition: '25% 35%',
+            backgroundRepeat: 'none',
+            backgroundAttachment: 'fixed'
+        }
+
+        const bookImage = {
+            backgroundImage: `url(${book.image})`,
+            backgroundSize: 'cover'
+        }
+
         return (
-            <div>
-                <h2>{book.title}</h2>
-                <p>{book._id}</p>
-                <img src={book.image || '/book-cover-placeholder.png'} width="100px" />
-                <p>{book.category}</p>
-                <p>{book.year}</p>
-                <p>{book.description}</p>
-                <ul>
-                    {
-                        book.author.map((name, j) => {
-                            return (
-                                <li key={j}>{name}</li>
-                            )
-                        })
-                    }
-                </ul>
-                <Link to={`/books/q/${book._id}/edit`}><button>Edit</button></Link>
-                <button onClick={handleDelete}>Delete</button>
-            </div>
+            <main style={backImage} id={styles.showBook}>
+                <div id={styles.bookDetails} className="mainPadding">
+                    <div>
+                        <h2>{book.title}</h2>
+                        {/* <p>{book._id}</p> */}
+                        <ul>
+                            {
+                                book.author.map((name, j) => {
+                                    return (
+                                        <li key={j}>{name}</li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <img src={book.image || '/book-cover-placeholder.png'} title={book.title} />
+                        <p>{book.category}</p>
+                        <p>{book.year}</p>
+                        <p className={styles.description}>{book.description}</p>
+
+                        <div className='buttonGroup'>
+                            <Link to={`/books/q/${book._id}/edit`}><button>Edit</button></Link>
+                            <button onClick={handleDelete}>Delete</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id={styles.bookImage} style={bookImage}>
+                    <div className='overlay'></div>
+                </div>
+            </main>
         )
     }
 

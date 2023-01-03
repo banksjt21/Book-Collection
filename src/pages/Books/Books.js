@@ -36,30 +36,45 @@ export default function Books({ user, setUser }) {
 
 
     const loaded = () => {
+
+        const backImage = {
+            backgroundImage: "url(/images/bookshelf-1-bw-faded.png)",
+            backgroundPosition: '25% 35%',
+            backgroundRepeat: 'none',
+            backgroundAttachment: 'fixed'
+        }
+
         return (
-            <div>
-                <h2>Books - Index</h2>
-                {
-                    books.map((book, i) => {
-                        return (
-                            <div key={i}>
-                                <Link to={`/books/q/${book._id}`}><h4>{book.title}</h4></Link>
-                                <img src={book.image || '/book-cover-placeholder.png'} width="100px" />
-                                <p>{book.description}</p>
-                                <ul>
-                                    {
-                                        book.author.map((name, j) => {
-                                            return (
-                                                <li key={j}>{name}</li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+            <main style={backImage}>
+                <div id={styles.collection}>
+                    <h2>Collection</h2>
+                    <p className='mainSubtitle'>Keep track of all your books</p>
+                    <span className={styles.collectionInfo}>{books.length} Books</span>
+                    <div id={styles.allBooks}>
+                        {
+                            books.map((book, i) => {
+                                return (
+                                    <span className={styles.book} key={i}>
+                                        {/* <Link to={`/books/q/${book._id}`}><h4>{book.title}</h4></Link> */}
+                                        <Link to={`/books/q/${book._id}`}><img src={book.image || '/book-cover-placeholder.png'} alt={book.title} title={book.title} /></Link>
+                                        {/* <p>{book.description}</p>
+                                        <ul>
+                                            {
+                                                book.author.map((name, j) => {
+                                                    return (
+                                                        <li key={j}>{name}</li>
+                                                    )
+                                                })
+                                            }
+                                        </ul> */}
+                                    </span>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+
+            </main>
         )
     }
 

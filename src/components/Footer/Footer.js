@@ -1,5 +1,5 @@
 /*  ===========================================================================
-//  LoginForm.module.css
+//  Footer.js
 //  ===========================================================================
 //  - 
 //  =======================================================================  */
@@ -8,40 +8,19 @@
 
 
 /*  ===========================================================================
-//  Tags
+//  DEPENDENCIES
 //  =======================================================================  */
-/* h3 {
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-input[type=text], 
-input[type=password], 
-input[type=email] {
-    padding: 10px 25px;
-    background-color: transparent;
-    border: 1px solid gray;
-    margin-bottom: 10px;
-    color: white;
-}
-
-button[type=submit] {
-    background-color: var(--teal);
-    color: var(--navy);
-}
-
-button:hover{
-    mix-blend-mode: difference;
-} */
-
+import styles from './Footer.module.css';
 
 
 
 /*  ===========================================================================
-//  Classes
+//  COMPONENTS
 //  =======================================================================  */
-.authText {
-    color: var(--yellow);
-    font-weight: bold;
-    margin-bottom: 20px;
+export default function Footer() {
+    return (
+        <footer>
+            <p>Copyright © 2023. Proudly designed by Jermaine Banks</p>
+        </footer>
+    )
 }

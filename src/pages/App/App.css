@@ -1,0 +1,159 @@
+/*  ===========================================================================
+//  App.css
+//  ===========================================================================
+//  - 
+//  =======================================================================  */
+
+
+
+
+/*  ===========================================================================
+//  Google Fonts / Variables / Global Reset
+//  =======================================================================  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --orange: #FF6F00;
+    --yellow: #FFE763;
+    --teal  : #2E8A7D;
+    --navy  : #0C2840;
+    --white : #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #EEEEEE;
+}
+
+
+
+
+/*  ===========================================================================
+//  Tags
+//  =======================================================================  */
+body {
+    min-height: 100vh;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: var(--yellow);
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-weight: lighter;
+}
+
+button,
+input[type=submit] {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: var(--teal);
+    color: white;
+}
+
+a {
+    color: var(--orange);
+}
+
+a:hover, 
+button:hover,
+input[type=submit]:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+input,
+textarea {
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type=text], 
+input[type=password], 
+input[type=email],
+textarea {
+    padding: 10px 25px;
+    /* font-weight: 900; */
+}
+
+
+
+
+/*  ===========================================================================
+//  Classes
+//  =======================================================================  */
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* .displayFlex {
+    display: flex;
+}
+
+.displayFlexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.displayFlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.alignCenter {
+    justify-content: center;
+    align-items: center;
+} */
+
+.overlay {
+    background-color: rgba(12, 40, 64, 0.70);
+    height: 100%;
+    width: 100%;
+}
+
+.mainPadding {
+    margin: 100px 80px 100px 160px;
+}
+
+
+
+
+main {
+    /* padding: 100px 160px; */
+    min-height: calc(100vh - 200px);
+    display: flex;
+}
+
+.mainSubtitle {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.splitPage {
+    width: 50%;
+    display: flex;
+}

@@ -10,8 +10,8 @@
 /*  ===========================================================================
 //  DEPENDENCIES
 //  =======================================================================  */
-import styles from './UserLogout.module.css';
 import { logOut } from '../../utilities/users-service';
+import styles from './UserLogout.module.css';
 
 
 
@@ -27,10 +27,15 @@ export default function UserLogout({ user, setUser }) {
     }
 
     return (
-        <div className={styles.UserLogOut}>
-            <div>{user.username}</div>
-            <div className="">{user.email}</div>
-            <button className="" onClick={handleLogout}>LOG OUT</button>
+        <div id={styles.userLogout}>
+            <div className=''>
+                {/* {user.username} */}
+                <p>Signed in as: {user.email}</p>
+            </div>
+
+            <div>
+                <button className="" onClick={handleLogout}>Logout</button>
+            </div>
         </div>
     );
 }

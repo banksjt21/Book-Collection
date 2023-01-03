@@ -1,5 +1,5 @@
 /*  ===========================================================================
-//  UserLogout.module.css
+//  Footer.module.css
 //  ===========================================================================
 //  - 
 //  =======================================================================  */
@@ -8,19 +8,17 @@
 
 
 /*  ===========================================================================
-//  
+//  Tags
 //  =======================================================================  */
-#userLogout {
+footer {
+    height: 100px;
+    background-color: rgb(35, 60, 79, 0.98);
     display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-#userLogout div {
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-#userLogout p {
-    color: var(--white);
+footer p {
+    color: var(--yellow);
+    font-weight: bold;
 }

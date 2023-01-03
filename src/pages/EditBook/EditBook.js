@@ -60,25 +60,58 @@ export default function EditBook() {
 
 
     const loaded = () => {
+
+        const backImage = {
+            backgroundImage: "url(/images/bookshelf-1-bw-faded.png)",
+            backgroundPosition: '25% 35%',
+            backgroundRepeat: 'none',
+            backgroundAttachment: 'fixed'
+        }
+
+        const bookImage = {
+            backgroundImage: `url(${book.image})`,
+            backgroundSize: 'cover'
+        }
+
         return (
-            <div>
-                <h2>Editing: {book.title}</h2>
-                <form autoComplete="off" onSubmit={handleUpdate}>
-                    <label>Title</label><br />
-                    <input type="text" name="title" onChange={handleChange} defaultValue={book.title} required /><br />
-                    <label>Author</label><br />
-                    <input type="text" name="author" onChange={handleChange} defaultValue={book.author} /><br />
-                    <label>Description</label><br />
-                    <textarea name="description" rows="5" cols="50" onChange={handleChange} defaultValue={book.description} ></textarea><br />
-                    <label>Year Published</label><br />
-                    <input type="text" name="year" onChange={handleChange} defaultValue={book.year} /><br />
-                    <label>Category</label><br />
-                    <input type="text" name="category" onChange={handleChange} defaultValue={book.category} /><br />
-                    <label>Image</label><br />
-                    <input type="text" name="image" onChange={handleChange} defaultValue={book.image} /><br />
-                    <input type="submit" value="Update Book" />
-                </form>
-            </div>
+            <main style={backImage}>
+                <div id={styles.bookDetails} className={`mainPadding ${styles.bookEditing}`}>
+                    <div className={styles.bookEditingDiv}>
+
+                        <form autoComplete="off" onSubmit={handleUpdate}>
+                            <div className={styles.editTitleDiv}>
+                                <h2>Editing: </h2>
+                                {/* <label>Title</label><br /> */}
+                                <input className={styles.editTitle} type="text" name="title" onChange={handleChange} defaultValue={book.title} required /><br />
+                            </div>
+
+                            {/* <label>Author</label><br /> */}
+                            <input className={styles.editAuthor} type="text" name="author" onChange={handleChange} defaultValue={book.author} /><br />
+
+                            <img className={styles.editImage} src={book.image || '/book-cover-placeholder.png'} title={book.title} /><br />
+
+                            {/* <label>Category</label><br /> */}
+                            <input className={styles.editCategory} type="text" name="category" onChange={handleChange} defaultValue={book.category} /><br />
+
+                            {/* <label>Year Published</label><br /> */}
+                            <input className={styles.editPublicationDate} type="text" name="year" onChange={handleChange} defaultValue={book.year} /><br />
+
+                            {/* <label>Description</label><br /> */}
+                            <textarea className={styles.editDescription} name="description" rows="5" cols="50" onChange={handleChange} defaultValue={book.description} ></textarea><br />
+
+                            {/* <label>Image</label><br /> */}
+                            <input className={styles.editImageURL} type="text" name="image" onChange={handleChange} defaultValue={book.image} /><br />
+
+                            <input type="submit" value="Update Book" />
+                        </form>
+                    </div>
+
+                </div>
+
+                <div id={styles.bookImage} style={bookImage}>
+                    <div className='overlay'></div>
+                </div>
+            </main>
         )
     }
 

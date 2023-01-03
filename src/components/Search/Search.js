@@ -49,7 +49,7 @@ export default function Search() {
     }
 
     const goToResults = () => {
-        navigate('/books/results',{
+        navigate('/books/results', {
             state: {
                 searchResults: googleBooks
             }
@@ -57,30 +57,40 @@ export default function Search() {
     }
 
     useEffect(() => {
-        if(googleBooks) {
+        if (googleBooks) {
             goToResults();
         }
     }, [googleBooks])
 
 
     return (
-        <div>
-            <h2>Search</h2>
-            <form autoComplete="off" onSubmit={handleSubmit}>
-                <label>Search Terms</label><br />
-                <input type="text" name="searchTerms" onChange={handleChange} required /><br />
-                <label>Title</label><br />
-                <input type="text" name="title" onChange={handleChange} /><br />
-                <label>Author</label><br />
-                <input type="text" name="author" onChange={handleChange} /><br />
-                <label>Publisher</label><br />
-                <input type="text" name="publisher" onChange={handleChange} /><br />
-                <label>Subject</label><br />
-                <input type="text" name="subject" onChange={handleChange} /><br />
-                <label>ISBN</label><br />
-                <input type="text" name="isbn" onChange={handleChange} /><br />
-                <input type="submit" value="Search for Book" />
-            </form>
-        </div>
+        <main>
+            <div className="splitPage">
+                <div>
+                    <h2>Search</h2>
+                    <form autoComplete="off" onSubmit={handleSubmit}>
+                        <label>Search Terms</label><br />
+                        <input type="text" name="searchTerms" onChange={handleChange} required /><br />
+                        <label>Title</label><br />
+                        <input type="text" name="title" onChange={handleChange} /><br />
+                        <label>Author</label><br />
+                        <input type="text" name="author" onChange={handleChange} /><br />
+                        <label>Publisher</label><br />
+                        <input type="text" name="publisher" onChange={handleChange} /><br />
+                        <label>Subject</label><br />
+                        <input type="text" name="subject" onChange={handleChange} /><br />
+                        <label>ISBN</label><br />
+                        <input type="text" name="isbn" onChange={handleChange} /><br />
+                        <input type="submit" value="Search for Book" />
+                    </form>
+                </div>
+            </div>
+
+            <div className='splitPage'>
+                <div className='overlay'></div>
+            </div>
+
+        </main>
+
     )
 }

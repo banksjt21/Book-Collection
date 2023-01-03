@@ -12,6 +12,7 @@
 //  =======================================================================  */
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import styles from './LoginForm.module.css';
 
 
 
@@ -47,17 +48,16 @@ export default function LoginForm({ setUser }) {
 	}
 
 	return (
-		<div>
+		<>
 			<div className="">
+				<p className={styles.authText}>Already have an account?</p>
 				<form autoComplete="off" onSubmit={handleSubmit}>
-					<label>Email</label>
-					<input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-					<label>Password</label>
-					<input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-					<button type="submit">LOG IN</button>
+					<input type="text" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" required /><br />
+					<input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required /><br />
+					<button type="submit">LOGIN</button>
 				</form>
 			</div>
 			<p className="">&nbsp;{error}</p>
-		</div>
+		</>
 	);
 }

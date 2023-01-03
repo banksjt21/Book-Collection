@@ -1,0 +1,176 @@
+/*  ===========================================================================
+//  AuthPage.module.css
+//  ===========================================================================
+//  - 
+//  =======================================================================  */
+
+
+
+
+/*  ===========================================================================
+//  Tags
+//  =======================================================================  */
+h1 {
+    mix-blend-mode: difference;
+    margin-bottom: 40px;
+}
+
+button:hover{
+    mix-blend-mode: difference;
+}
+
+
+
+
+/*  ===========================================================================
+//  Body
+//  =======================================================================  */
+/* #bodyWrapper {
+    background-image: url('../../../public/images/kot-ptitsa-knigi.png');
+    background-size: 2400px;
+    background-position: 25% 95%;
+    background-repeat: none;
+} */
+
+
+
+
+/*  ===========================================================================
+//  Header
+//  =======================================================================  */
+#authPage #authHeader {
+    display: flex;
+    height: 600px;
+    background-color: transparent;
+    padding: 0;
+}
+
+#authPage #headerDetails {
+    width: 75%;
+    padding: 100px 160px;
+    color: var(--yellow);
+}
+
+#authPage .headerDetailsContent {
+    width: 60%;
+}
+
+#authPage .subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    mix-blend-mode: difference;
+    color: var(--yellow);
+}
+
+#authPage .subtext {
+    margin-bottom: 40px;
+    mix-blend-mode: difference;
+    color: var(--white);
+}
+
+#authPage .buttonLogin {
+    background-color: var(--orange);
+    color:white;
+}
+
+#authPage .buttonSignup {
+    background-color: var(--yellow);
+    color:teal;
+}
+
+
+
+
+/*  ===========================================================================
+//  AuthForm
+//  =======================================================================  */
+#authPage #authForm {
+    width: 25%;
+    padding: 100px 60px;
+    background-color: rgb(12, 40, 64, 0.9);
+}
+
+#authForm h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+#authForm input[type=text], 
+#authForm input[type=password], 
+#authForm input[type=email] {
+    padding: 10px 25px;
+    /* font-weight: 900; */
+    background-color: transparent;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#authForm button[type=submit] {
+    background-color: var(--teal);
+    color: var(--navy);
+}
+
+#authForm button:hover{
+    mix-blend-mode: difference;
+}
+
+
+
+
+/*  ===========================================================================
+//  Main
+//  =======================================================================  */
+#authPage main {
+    height: 700px;
+    background-color: rgba(242,202,92,0.9);
+    padding: 100px 160px;
+    flex-direction: column;
+}
+
+#authPage main h2 {
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#authPage main h2:hover {
+    mix-blend-mode: difference;
+}
+
+#authPage .steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+#authPage .steps div {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#authPage .steps div *:hover {
+    mix-blend-mode: difference;
+}
+
+#authPage main img {
+    margin-bottom: 20px;
+}
+
+#authPage main h3 {
+    color: var(--orange);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#authPage main p {
+    padding: 0 10px;
+    text-align: center;
+    color: var(--teal);
+}

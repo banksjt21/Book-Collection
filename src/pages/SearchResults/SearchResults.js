@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { addBook } from '../../utilities/books-api';
+import styles from './SearchResults.module.css';
 
 
 
@@ -47,7 +48,7 @@ export default function SearchResults({ user, setUser }) {
         if (selectedBook.volumeInfo.imageLinks === undefined) {
             console.log(selectedBook.imageLinks)
             Object.defineProperty(selectedBook.volumeInfo, 'imageLinks', {
-                value: {thumbnail: ''},
+                value: { thumbnail: '' },
                 writable: true
             });
         }
@@ -72,70 +73,100 @@ export default function SearchResults({ user, setUser }) {
 
 
     const loaded = () => {
+
+        const backImage = {
+            backgroundImage: "url(/images/bookshelf-1-bw-faded.png)",
+            backgroundPosition: '25% 35%',
+            backgroundRepeat: 'none',
+            backgroundAttachment: 'fixed'
+        }
+
+        const bookImage = {
+            // backgroundImage: `url(${book.image})`,
+            // backgroundSize: 'cover'
+        }
+
         return (
-            <div>
-                <h2>Search Results</h2>
-                {
-                    googleBooks.map((book, i) => {
+            <main style={backImage} id={styles.searchResults} >
+                <div className="splitPage mainPadding">
+                    <div>
+                        <h2>Search Results</h2>
+                        <p className='mainSubtitle'>Here are the book(s) that match your search</p>
+                        {
+                            googleBooks.map((book, i) => {
 
-                        let googleBookID = book.id;
-                        // console.log(googleBookID);
+                                let googleBookID = book.id;
+                                // console.log(googleBookID);
 
-                        book = book.volumeInfo;
+                                book = book.volumeInfo;
 
-                        //  Handle results that are missing information
-                        let bookCover;
-                        if (book.imageLinks) {
-                            bookCover = book.imageLinks.thumbnail;
-                        } else {
-                            bookCover = '/book-cover-placeholder.png'
+                                //  Handle results that are missing information
+                                let bookCover;
+                                if (book.imageLinks) {
+                                    bookCover = book.imageLinks.thumbnail;
+                                } else {
+                                    bookCover = '/book-cover-placeholder.png'
+                                }
+
+                                book.categories = book.categories || ["No Category"];
+                                book.publishedDate = book.publishedDate || "No Year";
+                                book.description = book.description || "No Description";
+                                book.publisher = book.publisher || "No Publisher";
+                                book.authors = book.authors || ["No Author"];
+
+
+
+                                return (
+                                    <>
+                                        <div className={styles.resultBook} key={i}>
+
+                                            <img src={bookCover} width="100px" />
+
+                                            <div className={styles.resultBookDetails}>
+                                                <h3>{book.title}</h3>
+                                                <ul>
+                                                    {
+                                                        book.authors.map((author, k) => {
+                                                            return (
+                                                                <li key={k}>{author}</li>
+                                                            )
+                                                        })
+                                                    }
+                                                </ul>
+                                                <p>{book.description.substring(0, 260)}...</p>
+                                                {/* <ul>
+                                                {
+                                                    book.categories.map((category, j) => {
+                                                        return (
+                                                            <li key={j}>{category}</li>
+                                                        )
+                                                    })
+                                                }
+                                                </ul> */}
+                                                {/* <p>{book.publishedDate}</p> */}
+                                                {/* <p>{book.publisher}</p> */}
+                                            </div>
+
+
+                                        </div>
+
+                                        <form autoComplete="off" onSubmit={handleSubmit}>
+                                            <input type="hidden" name="googleBookID" value={googleBookID} />
+                                            <input type="submit" value="Add to Collection" />
+                                        </form>
+                                    </>
+                                )
+                            })
                         }
+                    </div>
 
-                        book.categories = book.categories || ["No Category"];
-                        book.publishedDate = book.publishedDate || "No Year";
-                        book.description = book.description || "No Description";
-                        book.publisher = book.publisher || "No Publisher";
-                        book.authors = book.authors || ["No Author"];
+                </div>
 
+                <div className='splitPage'>
+                    <div className='overlay'></div>
+                </div>
 
-
-                        return (
-                            <div key={i}>
-                                <h3>{book.title}</h3>
-                                <img src={bookCover} width="100px" />
-                                <ul>
-                                    {
-                                        book.categories.map((category, j) => {
-                                            return (
-                                                <li key={j}>{category}</li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                                <p>{book.publishedDate}</p>
-                                <p>{book.description}</p>
-                                <p>{book.publisher}</p>
-                                <ul>
-                                    {
-                                        book.authors.map((author, k) => {
-                                            return (
-                                                <li key={k}>{author}</li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-
-
-
-                                <form autoComplete="off" onSubmit={handleSubmit}>
-                                    <input type="hidden" name="googleBookID" value={googleBookID} />
-                                    <input type="submit" value="Add to Collection" />
-                                </form>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+            </main>
         )
     }
 
