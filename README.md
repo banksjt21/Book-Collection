@@ -4,7 +4,7 @@ Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading mat
 
 Tsundoku, as an app, was developed to allow users to easily manage their ever-growing book collection. It is available for preview [here](https://github.com/facebook/create-react-app).
 
-Note: This app is currently in its beta phase. Certain pages, features, etc. and your saved books may be modified with notice.
+Note: This app is currently in its beta phase. Certain pages, features, etc. and your saved books may be modified without notice.
 <br><br>
 
 

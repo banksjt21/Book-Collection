@@ -158,6 +158,25 @@ main {
     margin-right: 10px;
 }
 
+.backArrow {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.backArrow {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--teal);
+}
+
+.backArrow:hover {
+    color: var(--orange);
+}
+
+::placeholder {
+    font-style: italic;
+}
+
 
 
 /* .displayFlex {

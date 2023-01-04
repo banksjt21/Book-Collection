@@ -68,7 +68,7 @@ export default function Book() {
             <main style={backImage} id={styles.showBook}>
                 <div id={styles.bookDetails} className="mainPadding">
                     <div>
-                        <h2>{book.title}</h2>
+                        <h2><Link className='backArrow' to={`/books/`} ><span>‹</span></Link>{book.title}</h2>
                         {/* <p>{book._id}</p> */}
                         <ul>
                             {
