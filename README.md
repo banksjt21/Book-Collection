@@ -44,7 +44,7 @@ Note: This app is currently in its beta phase. Certain pages, features, etc. and
 
 Tsundoku was built using the HTML, CSS, and JavaScript languages.
 It was developed using the MERN stack:
-| ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white) | ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white) | ![React.js](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white) |
-| :-----------: | :-----------: | :-----------: | :-----------: |
 | [MONGODB](https://www.mongodb.com/) | [EXPRESS](https://expressjs.com/) | [REACT](https://reactjs.org/) | [NODE](https://nodejs.org/en/) |
+| :-----------: | :-----------: | :-----------: | :-----------: |
+| ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white) | ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white) | ![React.js](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white) |
 | MongoDB is a Document Database, which stores all schema and records in documents using a JSON (JavaScript Object Notation) like syntax. | Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js | React is a free and open-source front-end JavaScript library for building user interfaces based on UI components | Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser. |
