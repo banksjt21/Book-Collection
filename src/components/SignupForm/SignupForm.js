@@ -73,7 +73,7 @@ export default function SignupForm({ setUser }) {
                     <input type="email" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" required /><br />
                     <input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required /><br />
                     <input type="password" name="confirm" value={credentials.confirm} onChange={handleChange} placeholder="Confirm" required /><br />
-                    <button type="submit" disabled={disable}>SIGNUP</button>
+                    <button type="submit" disabled={disable}><i className="fa-solid fa-book-bookmark marginRight10"></i><span>Signup</span></button>
                 </form>
             </div>
             <p className="">&nbsp;{credentials.error}</p>

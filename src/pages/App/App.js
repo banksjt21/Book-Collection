@@ -27,6 +27,7 @@ import './App.css';
 import { Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 

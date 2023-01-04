@@ -102,7 +102,7 @@ export default function EditBook() {
                             {/* <label>Image</label><br /> */}
                             <input className={styles.editImageURL} type="text" name="image" onChange={handleChange} defaultValue={book.image} /><br />
 
-                            <input type="submit" value="Update Book" />
+                            <button type="submit" ><i className="fa-solid fa-file-pen marginRight10"></i><span>Update Book</span></button>
                         </form>
                     </div>
 

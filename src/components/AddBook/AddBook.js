@@ -66,7 +66,7 @@ export default function AddBook({ user, setUser }) {
                         <input type="text" name="category" onChange={handleChange} />
                         <label>Image URL</label>
                         <input type="text" name="image" onChange={handleChange} /><br />
-                        <input type="submit" value="Add Book" />
+                        <button type="submit" ><i className="fa-solid fa-plus marginRight10"></i><span>Add Book</span></button>
                     </form>
                 </div>
 

@@ -34,7 +34,7 @@ export default function UserLogout({ user, setUser }) {
             </div>
 
             <div>
-                <button className="" onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout}><span>Logout</span><i className="fa-solid fa-person-through-window marginLeft10"></i></button>
             </div>
         </div>
     );

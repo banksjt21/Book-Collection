@@ -45,8 +45,8 @@ export default function AuthPage({ setUser }) {
                         <p className={styles.subtitle}>Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials, but letting them pile up in one's home without reading them.</p>
                         <p className={styles.subtext}>Tsundoku, as an app, allows users to easily manage their ever-growing book collection.</p>
                         <div className="buttonGroup">
-                            <button onClick={() => setShowLogin(true)} className={styles.buttonLogin}>Login</button>
-                            <button onClick={() => setShowLogin(false)} className={styles.buttonSignup}>Signup</button>
+                            <button onClick={() => setShowLogin(true)} className={styles.buttonLogin}><span>Login</span><i className="fa-solid fa-right-to-bracket marginLeft10"></i></button>
+                            <button onClick={() => setShowLogin(false)} className={styles.buttonSignup}><i className="fa-solid fa-book-bookmark marginRight10"></i><span>Signup</span></button>
                         </div>
                     </div>
                 </div>

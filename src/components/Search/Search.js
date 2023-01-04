@@ -81,7 +81,7 @@ export default function Search() {
                         <input type="text" name="subject" onChange={handleChange} />
                         <label>ISBN</label>
                         <input type="text" name="isbn" onChange={handleChange} /><br />
-                        <input type="submit" value="Search for Book" />
+                        <button type="submit" ><i className="fa-solid fa-magnifying-glass marginRight10"></i><span>Search for Book</span></button>
                     </form>
                 </div>
             </div>

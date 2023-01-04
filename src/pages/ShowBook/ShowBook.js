@@ -85,8 +85,8 @@ export default function Book() {
                         <p className={styles.description}>{book.description}</p>
 
                         <div className='buttonGroup'>
-                            <Link to={`/books/q/${book._id}/edit`}><button>Edit</button></Link>
-                            <button onClick={handleDelete}>Delete</button>
+                            <Link to={`/books/q/${book._id}/edit`}><button><i className="fa-solid fa-pen marginRight10"></i><span>Edit</span></button></Link>
+                            <button onClick={handleDelete}><i className="fa-solid fa-trash marginRight10"></i><span>Delete</span></button>
                         </div>
                     </div>
 

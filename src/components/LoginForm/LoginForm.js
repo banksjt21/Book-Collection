@@ -54,7 +54,7 @@ export default function LoginForm({ setUser }) {
 				<form autoComplete="off" onSubmit={handleSubmit}>
 					<input type="text" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" autoFocus required /><br />
 					<input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required /><br />
-					<button type="submit">LOGIN</button>
+					<button type="submit"><span>Login</span><i class="fa-solid fa-right-to-bracket marginLeft10"></i></button>
 				</form>
 			</div>
 			<p className="">&nbsp;{error}</p>
