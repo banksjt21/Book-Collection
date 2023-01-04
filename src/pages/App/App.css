@@ -13,11 +13,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-    --orange: #FF6F00;
-    --yellow: #FFE763;
-    --teal  : #2E8A7D;
-    --navy  : #0C2840;
-    --white : #FFFFFF;
+    --orange    : #FF6F00;
+    --yellow    : #FFE763;
+    --darkYellow: #F3BF23;
+    --teal      : #2E8A7D;
+    --navy      : #0C2840;
+    --white     : #FFFFFF;
 }
 
 * {

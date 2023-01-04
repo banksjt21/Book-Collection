@@ -42,8 +42,8 @@ export default function AuthPage({ setUser }) {
                             <h1>TSUNDOKU</h1>
                         </div>
                         
-                        <p className={styles.subtitle}>Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials but letting them pile up in one's home without reading them.</p>
-                        <p className={styles.subtext}>Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet.</p>
+                        <p className={styles.subtitle}>Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials, but letting them pile up in one's home without reading them.</p>
+                        <p className={styles.subtext}>Tsundoku, as an app, allows users to easily manage their ever-growing book collection.</p>
                         <div className="buttonGroup">
                             <button onClick={() => setShowLogin(true)} className={styles.buttonLogin}>Login</button>
                             <button onClick={() => setShowLogin(false)} className={styles.buttonSignup}>Signup</button>
@@ -63,17 +63,17 @@ export default function AuthPage({ setUser }) {
                     <div>
                         <img src='/images/icon-book-pen.png' alt='signup' />
                         <h3>Signup Here</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <p>Signing up is easy and takes less than a minute! Once registered, simply login to start adding!</p>
                     </div>
                     <div>
                         <img src='/images/icon-open-book.png' alt='signup' />
                         <h3>Add Books</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <p>Adding books to your collection is made is with our convenient search feature.</p>
                     </div>
                     <div>
                         <img src='/images/icon-books-standing.png' alt='signup' />
                         <h3>Manage Your Collection!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <p>Once you've added a few books, simply click on the book of your choice and update its details.</p>
                     </div>
                 </div>
             </main>

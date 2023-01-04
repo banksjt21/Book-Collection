@@ -10,9 +10,7 @@
 /*  ===========================================================================
 //  Tags
 //  =======================================================================  */
-button:hover{
-    mix-blend-mode: difference;
-}
+
 
 
 
@@ -62,6 +60,9 @@ button:hover{
     margin-bottom: 40px;
     mix-blend-mode: difference;
     color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    /* font-style: italic; */
 }
 
 #authPage .buttonLogin {
@@ -85,7 +86,6 @@ button:hover{
     mix-blend-mode: difference;
 }
 
-
 #authHeader .titleBlock {
     display: flex;
     align-items: center;
@@ -107,6 +107,10 @@ button:hover{
 #authForm h3 {
     color: var(--white);
     margin-bottom: 10px;
+}
+
+#authPage button:hover{
+    mix-blend-mode: difference;
 }
 
 #authForm input[type=text], 

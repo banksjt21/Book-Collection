@@ -69,7 +69,7 @@ export default function SignupForm({ setUser }) {
             <div className="">
                 <p className={styles.authText}>Need an account?</p>
                 <form autoComplete="off" onSubmit={handleSubmit}>
-                    <input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Username" required /><br />
+                    <input type="text" name="username" value={credentials.username} onChange={handleChange} placeholder="Username" autoFocus required /><br />
                     <input type="email" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" required /><br />
                     <input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required /><br />
                     <input type="password" name="confirm" value={credentials.confirm} onChange={handleChange} placeholder="Confirm" required /><br />

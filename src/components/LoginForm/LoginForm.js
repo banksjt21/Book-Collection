@@ -52,7 +52,7 @@ export default function LoginForm({ setUser }) {
 			<div className="">
 				<p className={styles.authText}>Already have an account?</p>
 				<form autoComplete="off" onSubmit={handleSubmit}>
-					<input type="text" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" required /><br />
+					<input type="text" name="email" value={credentials.email} onChange={handleChange} placeholder="Email" autoFocus required /><br />
 					<input type="password" name="password" value={credentials.password} onChange={handleChange} placeholder="Password" required /><br />
 					<button type="submit">LOGIN</button>
 				</form>
