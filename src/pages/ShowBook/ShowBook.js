@@ -64,6 +64,11 @@ export default function Book() {
             backgroundSize: 'cover'
         }
 
+        book.category = book.category || ["No Category"];
+        book.year = book.year || "No Publication Date";
+        book.description = book.description || "No Description";
+        book.authors = book.authors || ["No Author"];
+
         return (
             <main style={backImage} id={styles.showBook}>
                 <div id={styles.bookDetails} className="mainPadding">
@@ -79,7 +84,7 @@ export default function Book() {
                                 })
                             }
                         </ul>
-                        <img src={book.image || '/book-cover-placeholder.png'} title={book.title} />
+                        <img src={book.image || '/images/book-cover-placeholder.png'} title={book.title} />
                         <p>{book.category}</p>
                         <p>{book.year}</p>
                         <p className={styles.description}>{book.description}</p>

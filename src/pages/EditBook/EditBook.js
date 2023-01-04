@@ -89,7 +89,7 @@ export default function EditBook() {
                             {/* <label>Author</label><br /> */}
                             <input className={styles.editAuthor} type="text" name="author" onChange={handleChange} defaultValue={book.author} placeholder="Authors (comma-separated)" /><br />
 
-                            <img className={styles.editImage} src={book.image || '/book-cover-placeholder.png'} title={book.title} /><br />
+                            <img className={styles.editImage} src={book.image || '/images/book-cover-placeholder.png'} title={book.title} /><br />
 
                             {/* <label>Category</label><br /> */}
                             <input className={styles.editCategory} type="text" name="category" onChange={handleChange} defaultValue={book.category} placeholder="Categories (comma-separated)" /><br />

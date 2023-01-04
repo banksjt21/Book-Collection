@@ -56,7 +56,7 @@ export default function Books({ user, setUser }) {
                                 return (
                                     <span className={styles.book} key={i}>
                                         {/* <Link to={`/books/q/${book._id}`}><h4>{book.title}</h4></Link> */}
-                                        <Link to={`/books/q/${book._id}`}><img src={book.image || '/book-cover-placeholder.png'} alt={book.title} title={book.title} /></Link>
+                                        <Link to={`/books/q/${book._id}`}><img src={book.image || '/images/book-cover-placeholder.png'} alt={book.title} title={book.title} /></Link>
                                         {/* <p>{book.description}</p>
                                         <ul>
                                             {

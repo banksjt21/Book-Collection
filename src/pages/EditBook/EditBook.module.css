@@ -58,7 +58,9 @@
 }
 
 .bookEditing .editImage {
+    width: 128px;
     margin-bottom: 30px;
+    border-radius: 5px;
 }
 
 .bookEditing .editCategory,

@@ -20,6 +20,7 @@
 #showBook img {
     margin-bottom: 30px;
     width: 128px;
+    border-radius: 5px;
 }
 
 #showBook p {
