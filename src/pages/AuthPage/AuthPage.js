@@ -28,8 +28,9 @@ export default function AuthPage({ setUser }) {
     const backImage = {
         backgroundImage: "url(/images/kot-ptitsa-knigi.png)",
         backgroundSize: '2400px',
-        backgroundPosition: '25% 95%',
-        backgroundRepeat: 'none'
+        backgroundPosition: '25% 65%',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
     }
 
     return (

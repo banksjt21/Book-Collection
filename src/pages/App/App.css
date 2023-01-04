@@ -97,6 +97,7 @@ input[type=email],
 textarea {
     padding: 10px 25px;
     /* font-weight: 900; */
+    background-color: transparent;
 }
 
 

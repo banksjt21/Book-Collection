@@ -11,6 +11,7 @@
 //  DEPENDENCIES
 //  =======================================================================  */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { addBook } from '../../utilities/books-api';
@@ -90,7 +91,7 @@ export default function SearchResults({ user, setUser }) {
             <main style={backImage} id={styles.searchResults} >
                 <div className="splitPage mainPadding">
                     <div>
-                        <h2>Search Results</h2>
+                        <h2><Link className='backArrow' to={`/books/new`} ><span>‹</span></Link>Search Results</h2>
                         <p className='mainSubtitle'>Here are the book(s) that match your search</p>
                         {
                             googleBooks.map((book, i) => {
