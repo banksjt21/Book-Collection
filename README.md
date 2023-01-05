@@ -44,6 +44,7 @@ Tsundoku is available for preview [here](https://tsundoku-crpc.onrender.com).
 - [ ] Add additional book details
 - [ ] Responsive website
 - [ ] Forgot username / password
+- [ ] Accessibility options (screen reader, language translation)
 <br><br><br>
 
 
