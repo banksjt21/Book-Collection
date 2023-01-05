@@ -13,11 +13,13 @@
 
 ## Introduction
 
-Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials, but letting them pile up in one's home without reading them.
+Tsundoku refers to the phenomenon of acquiring reading materials, but letting them pile up in one's home without reading them. It is also used to refer to books ready for reading later when they are on a bookshelf.
 
-Tsundoku, as an app, was developed to allow users to easily manage their ever-growing book collection. It is available for preview [here](https://tsundoku-crpc.onrender.com).
+Tsundoku, as an app, was developed to allow users to easily manage their ever-growing book collection. Books can be added to your collection by simplying utilizing the search page. This feature, which is powered by the Google Books API, returns a page of ten books which closely match your search terms. Once the desired book is located, simply press the 'Add to Collection' button and Voilà!
 
-Note: This app is currently in its beta phase. Certain pages, features, etc. and your saved books may be modified without notice.
+Note: This app is currently in its alpha phase and is still in active development. As such, certain pages, features, etc. and your saved books may be added, modified, and/or deleted without notice.
+
+Tsundoku is available for preview [here](https://tsundoku-crpc.onrender.com).
 <br><br><br>
 
 
