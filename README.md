@@ -5,8 +5,9 @@
 
 #### Table of Contents
 > 1. [Tsundoku](#tsundoku)
-> 2. [Features](#features)
-> 3. [Technologies Used](#technologies-used)
+> 2. [Introduction](#introduction)
+> 3. [Features](#features)
+> 4. [Technologies Used](#technologies-used)
 
 <br>
 
@@ -14,7 +15,7 @@
 
 Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials, but letting them pile up in one's home without reading them.
 
-Tsundoku, as an app, was developed to allow users to easily manage their ever-growing book collection. It is available for preview [here](https://github.com/facebook/create-react-app).
+Tsundoku, as an app, was developed to allow users to easily manage their ever-growing book collection. It is available for preview [here](https://tsundoku-crpc.onrender.com).
 
 Note: This app is currently in its beta phase. Certain pages, features, etc. and your saved books may be modified without notice.
 <br><br><br>
@@ -40,6 +41,7 @@ Note: This app is currently in its beta phase. Certain pages, features, etc. and
 - [ ] Sorting of books (category, publication date, author)
 - [ ] Add additional book details
 - [ ] Responsive website
+- [ ] Forgot username / password
 <br><br><br>
 
 
