@@ -62,17 +62,17 @@ export default function AuthPage({ setUser }) {
                 <h2>Manage Your Book Collection Easily!</h2>
                 <div className={styles.steps}>
                     <div>
-                        <img src='/images/icon-book-pen.png' alt='signup' />
+                        <img src='/images/cat-stare.png' alt='signup' />
                         <h3>Signup Here</h3>
                         <p>Signing up is easy and takes less than a minute! Once registered, simply login to start adding!</p>
                     </div>
                     <div>
-                        <img src='/images/icon-open-book.png' alt='signup' />
-                        <h3>Add Books</h3>
+                        <img src='/images/cat-fishing.png' alt='signup' />
+                        <h3>Add / Search for Books</h3>
                         <p>Adding books to your collection is made is with our convenient search feature.</p>
                     </div>
                     <div>
-                        <img src='/images/icon-books-standing.png' alt='signup' />
+                        <img src='/images/cat-books.png' alt='signup' />
                         <h3>Manage Your Collection!</h3>
                         <p>Once you've added a few books, simply click on the book of your choice and update its details.</p>
                     </div>
