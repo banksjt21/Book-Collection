@@ -1,5 +1,7 @@
 # TSUNDOKU
 
+![Tsundoku Banner](/public/images/banner.png "Tsundoku")
+
 Tsundoku (Japanese: 積ん読) refers to the phenomenon of acquiring reading materials, but letting them pile up in one's home without reading them.
 
 Tsundoku, as an app, was developed to allow users to easily manage their ever-growing book collection. It is available for preview [here](https://github.com/facebook/create-react-app).
