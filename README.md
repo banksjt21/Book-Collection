@@ -3,13 +3,18 @@
 ![Tsundoku Banner](/public/images/banner.png "Tsundoku")
 
 
+
+
 #### Table of Contents
 > 1. [Tsundoku](#tsundoku)
 > 2. [Introduction](#introduction)
 > 3. [Features](#features)
 > 4. [Technologies Used](#technologies-used)
 
-<br>
+
+
+
+<br><br>
 
 ## Introduction
 
@@ -20,8 +25,11 @@ Tsundoku, as an app, was developed to allow users to easily manage their ever-gr
 Note: This app is currently in its alpha phase and is still in active development. As such, certain pages, features, etc. and your saved books may be added, modified, and/or deleted without notice.
 
 Tsundoku is available for preview [here](https://tsundoku-crpc.onrender.com).
-<br><br><br>
 
+
+
+
+<br><br>
 
 ## Features
 
@@ -45,10 +53,11 @@ Tsundoku is available for preview [here](https://tsundoku-crpc.onrender.com).
 - [ ] Responsive website
 - [ ] Forgot username / password
 - [ ] Accessibility options (screen reader, language translation)
-<br><br><br>
 
 
 
+
+<br><br>
 
 ## Technologies Used
 
@@ -58,3 +67,16 @@ It was developed using the MERN stack:
 | :-----------: | :-----------: | :-----------: | :-----------: |
 | ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat&logo=mongodb&logoColor=white) | ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white) | ![React.js](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white) |
 | MongoDB is a Document Database, which stores all schema and records in documents using a JSON (JavaScript Object Notation) like syntax. | Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js | React is a free and open-source front-end JavaScript library for building user interfaces based on UI components | Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser. |
+
+
+
+
+#### CRUD Operations
+
+| Operation  | API route| HTTP method |
+| ----------- | ----------- | ------- |
+| Fetch all books in a user's collection | /api/books | GET |
+| Create/Add a book | /api/books | POST |
+| Update a book by id  | /api/books/q/:id | PUT |
+| Delete a book by id | /api/books/q/:id | DELETE |
+| Fetch a specific book by id  | /api/books/q/:id | GET |
