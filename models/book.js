@@ -25,7 +25,7 @@ const bookSchema = new Schema(
         description:  { type: String, },
         author:      [{ type: String }],
         year:         { type: String },
-        category:     { type: String },
+        category:    [{ type: String }],
         image:        { type: String },
         medium:       { type: Object },
         userID:       { type: Schema.Types.ObjectId, ref: 'User' }

@@ -98,7 +98,15 @@ export default function Book() {
                             }
                         </ul>
                         <img src={book.image || '/images/book-cover-placeholder.png'} title={book.title} />
-                        <p>{book.category}</p>
+                        <ul className={styles.category}>
+                            {
+                                book.category.map((name, k) => {
+                                    return (
+                                        <li key={k}>{name}</li>
+                                    )
+                                })
+                            }
+                        </ul>
                         <p>{book.year}</p>
                         <p className={styles.description}>{book.description}</p>
 

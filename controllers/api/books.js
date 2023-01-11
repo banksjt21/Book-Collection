@@ -50,6 +50,7 @@ async function remove(req, res) { // delete
 async function create(req, res) {
     try {
         req.body.author = req.body.author.split(",");
+        req.body.category = req.body.category.split(",");
         const book = await Book.create(req.body);
         res.status(200).json(book);
         // console.log(`${book.title} has been added to your collection!`);
