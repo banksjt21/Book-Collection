@@ -40,3 +40,19 @@
     image-rendering: pixelated;
     /* filter: grayscale(100%); */
 }
+
+
+#showBook fieldset input[type=checkbox], 
+#showBook fieldset label {
+    display: inline;
+}
+
+#showBook fieldset label {
+    display: inline;
+    margin-right: 20px;
+}
+
+#showBook fieldset input[type=checkbox] {
+    display: inline;
+    margin-right: 5px;
+}

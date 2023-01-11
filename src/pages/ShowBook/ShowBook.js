@@ -41,7 +41,15 @@ export default function Book() {
         getBook();
     }, [])
 
-    // console.log(book);
+    console.log(book);
+
+
+    // Types of book mediums. This is used in the html form.
+    const mediums = [
+        { name: "print", label: "Print" },
+        { name: "ebook", label: "E-Book" },
+        { name: "audio", label: "AudioBook" }
+    ];
 
     const navigate = useNavigate();
 
@@ -68,6 +76,11 @@ export default function Book() {
         book.year = book.year || "No Publication Date";
         book.description = book.description || "No Description";
         book.authors = book.authors || ["No Author"];
+        book.medium = book.medium || {
+            print: false,
+            ebook: false,
+            audio: false
+        }
 
         return (
             <main style={backImage} id={styles.showBook}>
@@ -88,6 +101,21 @@ export default function Book() {
                         <p>{book.category}</p>
                         <p>{book.year}</p>
                         <p className={styles.description}>{book.description}</p>
+
+                        {/* Checkboxes */}
+                        <fieldset>
+                            <legend>Type of Book Owned</legend>
+                            {
+                                mediums.map((medium, i) => {
+                                    return (
+                                        <span key={i}>
+                                            <input type="checkbox" name={medium.name} id={medium.name} defaultChecked={book.medium[medium.name]} disabled />
+                                            <label htmlFor={medium.name}>{medium.label}</label>
+                                        </span>
+                                    )
+                                })
+                            }
+                        </fieldset>
 
                         <div className='buttonGroup'>
                             <Link to={`/books/q/${book._id}/edit`}><button><i className="fa-solid fa-pen marginRight10"></i><span>Edit</span></button></Link>

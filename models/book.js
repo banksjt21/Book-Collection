@@ -27,6 +27,7 @@ const bookSchema = new Schema(
         year:         { type: String },
         category:     { type: String },
         image:        { type: String },
+        medium:       { type: Object },
         userID:       { type: Schema.Types.ObjectId, ref: 'User' }
     },
     {

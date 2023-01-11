@@ -6,7 +6,8 @@
 }
 
 #newBook input[type=text],
-#newBook textarea {
+#newBook textarea,
+fieldset {
     margin-bottom: 20px;
 }
 
@@ -18,4 +19,19 @@
 
 .searchLink:hover {
     color: var(--orange);
+}
+
+#newBook fieldset input[type=checkbox], 
+#newBook fieldset label {
+    display: inline;
+}
+
+#newBook fieldset label {
+    display: inline;
+    margin-right: 20px;
+}
+
+#newBook fieldset input[type=checkbox] {
+    display: inline;
+    margin-right: 5px;
 }

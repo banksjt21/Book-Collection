@@ -77,3 +77,20 @@
     image-rendering: pixelated;
     /* filter: grayscale(100%); */
 }
+
+
+
+.bookEditing fieldset input[type=checkbox], 
+.bookEditing fieldset label {
+    display: inline;
+}
+
+.bookEditing fieldset label {
+    display: inline;
+    margin-right: 20px;
+}
+
+.bookEditing fieldset input[type=checkbox] {
+    display: inline;
+    margin-right: 5px;
+}

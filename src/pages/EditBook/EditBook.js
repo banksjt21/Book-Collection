@@ -11,7 +11,7 @@
 /*  ===========================================================================
 //  DEPENDENCIES
 //  =======================================================================  */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
@@ -41,11 +41,54 @@ export default function EditBook() {
         getBook();
     }, []);
 
+
+
+
+    // Types of book mediums. This is used in the html form.
+    const mediums = [
+        { name: "print", label: "Print" },
+        { name: "ebook", label: "E-Book" },
+        { name: "audio", label: "AudioBook" }
+    ];
+
+    // Assigns the initial values of each variable
+    const printRef = useRef(false);
+    const ebookRef = useRef(false);
+    const audioRef = useRef(false);
+
+    // Used in the html form to assign a ref to a checkbox
+    const refs = [printRef, ebookRef, audioRef];
+
+
+    // Only used to console.log the value of each checkbox
+    const handleChecked = () => {
+        console.log("Print", printRef.current.checked);
+        console.log("E-Book", ebookRef.current.checked);
+        console.log("AudioBook", audioRef.current.checked);
+
+        const bookCopy = book;
+        bookCopy.medium = {
+            print: printRef.current.checked,
+            ebook: ebookRef.current.checked,
+            audio: audioRef.current.checked
+        }
+    }
+
+
+
+
+
     const [formData, setFormData] = useState(null);
 
     const getFormData = async () => {
         setFormData(book);
+        // console.log(formData)
     };
+
+    useEffect(() => {
+        getFormData(book);
+        console.log(formData);
+    })
 
 
     const handleChange = (event) => {
@@ -54,6 +97,16 @@ export default function EditBook() {
 
     const handleUpdate = async (event) => {
         event.preventDefault();
+
+        // Assign a new property which contains the checkbox values to the formData
+        formData.medium = {
+            print: printRef.current.checked,
+            ebook: ebookRef.current.checked,
+            audio: audioRef.current.checked
+        }
+
+        console.log(formData)
+
         const book = await booksAPI.updateBook(id, formData);
         navigate(`/books/q/${id}`);
         console.log(book);
@@ -102,6 +155,30 @@ export default function EditBook() {
 
                             {/* <label>Image</label><br /> */}
                             <input className={styles.editImageURL} type="text" name="image" onChange={handleChange} defaultValue={book.image} placeholder="http://www.ExampleLinkToAnAwesomeImage.com" /><br />
+
+
+                            {/* Checkboxes */}
+                            <fieldset>
+                                <legend>Type of Book Owned</legend>
+                                {
+                                    mediums.map((medium, i) => {
+
+                                        book.medium = book.medium || {
+                                            print: false,
+                                            ebook: false,
+                                            audio: false
+                                        }
+
+                                        return (
+                                            <span key={i}>
+                                                <input type="checkbox" name={medium.name} id={medium.name} ref={refs[i]} onChange={handleChecked} defaultChecked={book.medium[medium.name]} />
+                                                <label htmlFor={medium.name}>{medium.label}</label>
+                                            </span>
+                                        )
+                                    })
+                                }
+                            </fieldset>
+
 
                             <button type="submit" ><i className="fa-solid fa-file-pen marginRight10"></i><span>Update Book</span></button>
                         </form>
