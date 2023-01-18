@@ -1,6 +1,6 @@
 {
   "proxy": "http://localhost:3001",
-  "name": "book-collection",
+  "name": "tsundoku",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
