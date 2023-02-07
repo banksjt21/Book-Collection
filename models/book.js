@@ -28,6 +28,7 @@ const bookSchema = new Schema(
         category:    [{ type: String }],
         image:        { type: String },
         medium:       { type: Object },
+        read:         { type: Boolean },
         userID:       { type: Schema.Types.ObjectId, ref: 'User' }
     },
     {

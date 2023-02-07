@@ -81,6 +81,8 @@ export default function Book() {
             ebook: false,
             audio: false
         }
+        book.read = book.read || null;
+        
 
         return (
             <main style={backImage} id={styles.showBook}>
@@ -123,6 +125,18 @@ export default function Book() {
                                     )
                                 })
                             }
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Already Read This Book?</legend>
+                            <span>
+                                <input type="radio" name="read" id="readTrue" defaultChecked={book.read} disabled />
+                                <label htmlFor="readTrue">Read</label>
+                            </span>
+                            <span>
+                                <input type="radio" name="read" id="readFalse" defaultChecked={!(book.read)} disabled />
+                                <label htmlFor="readFalse">Not Read</label>
+                            </span>
                         </fieldset>
 
                         <div className='buttonGroup'>

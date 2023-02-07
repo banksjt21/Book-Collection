@@ -77,6 +77,18 @@ export default function EditBook() {
 
 
 
+    // Have read this book. This is used in the html form.
+    const readRef   = useRef(true);
+
+    // Only used to console.log the value of the first radio button
+    const handleRadio = () => {
+        console.log("Have Read", (readRef.current.checked));
+    }
+    
+
+
+
+
 
     const [formData, setFormData] = useState(null);
 
@@ -104,6 +116,9 @@ export default function EditBook() {
             ebook: ebookRef.current.checked,
             audio: audioRef.current.checked
         }
+
+        // Assign a new property which contains the radio button value for the first 'read' radio button
+        formData.read = readRef.current.checked;
 
         console.log(formData)
 
@@ -177,6 +192,20 @@ export default function EditBook() {
                                         )
                                     })
                                 }
+                            </fieldset>
+
+
+                            
+                            <fieldset>
+                                <legend>Already Read This Book?</legend>
+                                <span>
+                                    <input type="radio" name="read" id="readTrue" ref={readRef} onChange={handleRadio} defaultChecked={book.read} />
+                                    <label htmlFor="readTrue">Read</label>
+                                </span>
+                                <span>
+                                    <input type="radio" name="read" id="readFalse" onChange={handleRadio} defaultChecked={!(book.read)} />
+                                    <label htmlFor="readFalse">Not Read</label>
+                                </span>
                             </fieldset>
 
 

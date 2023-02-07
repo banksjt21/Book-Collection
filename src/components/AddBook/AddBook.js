@@ -27,6 +27,8 @@ export default function AddBook({ user, setUser }) {
     // console.log(user)
 
 
+
+
     // Types of book mediums. This is used in the html form.
     const mediums = [
         { name  : "print",     label: "Print" },
@@ -42,7 +44,6 @@ export default function AddBook({ user, setUser }) {
     // Used in the html form to assign a ref to a checkbox
     const refs = [printRef,ebookRef,audioRef];
 
-
     // Only used to console.log the value of each checkbox
     const handleChecked = () => {
         console.log("Print",     printRef.current.checked);
@@ -53,10 +54,21 @@ export default function AddBook({ user, setUser }) {
 
 
 
+    // Have read this book. This is used in the html form.
+    const readRef   = useRef(true);
+
+    // Only used to console.log the value of the first radio button
+    const handleRadio = () => {
+        console.log("Have Read", (readRef.current.checked));
+    }
+
+
+
+
 
     
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({ 
         title: "",
         author: "",
         description: "",
@@ -79,6 +91,9 @@ export default function AddBook({ user, setUser }) {
             ebook: ebookRef.current.checked,
             audio: audioRef.current.checked
         }
+
+        // Assign a new property which contains the radio button value for the first 'read' radio button
+        formData.read = readRef.current.checked;
         
         console.log(formData);
 
@@ -121,6 +136,18 @@ export default function AddBook({ user, setUser }) {
                                     )
                                 })
                             }
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Already Read This Book?</legend>
+                            <span>
+                                <input type="radio" name="read" id="readTrue" ref={readRef} onChange={handleRadio} />
+                                <label htmlFor="readTrue">Read</label>
+                            </span>
+                            <span>
+                                <input type="radio" name="read" id="readFalse" onChange={handleRadio} />
+                                <label htmlFor="readFalse">Not Read</label>
+                            </span>
                         </fieldset>
 
                         <button type="submit" ><i className="fa-solid fa-plus marginRight10"></i><span>Add Book</span></button>

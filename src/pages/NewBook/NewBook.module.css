@@ -31,7 +31,8 @@ fieldset {
     margin-right: 20px;
 }
 
-#newBook fieldset input[type=checkbox] {
+#newBook fieldset input[type=checkbox],
+#newBook fieldset input[type=radio] {
     display: inline;
     margin-right: 5px;
 }
