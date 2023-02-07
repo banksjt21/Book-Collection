@@ -40,9 +40,9 @@ Tsundoku is available for preview [here](https://tsundoku-crpc.onrender.com).
 - [x] Edit Book Details
 - [x] Delete Books
 - [x] Update book medium as 'Physical / Digital / Audio'
+- [x] Update book status as 'Read / Unread'
 
 #### Potential upcoming features:
-- [ ] Update book status as 'Read / Unread' <em>(in progress)</em>
 - [ ] Update book status as 'Owned / Wishlist'
 - [ ] Add notes to book details (reflections, thoughts, study reminders)
 - [ ] Add links for book purchasing
