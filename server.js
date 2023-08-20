@@ -73,7 +73,7 @@ app.use('/api/users', require("./routes/api/users"))
 
 // Protect the API routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
-app.use('/api/books', bookRoutes);
+// app.use('/api/books', bookRoutes);
 app.use('/api/books', ensureLoggedIn, require('./routes/api/books'));
 
 
